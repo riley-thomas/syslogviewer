@@ -133,7 +133,7 @@ class LogPage extends Component {
 	}
 
 	renderFilterToggle() {
-		return (<Row onClick={()=>{this.expand()}}><Col className="cursor-default"><FontAwesomeIcon icon="filter" /> Show/Hide Filters</Col><Col className="text-right"><Badge>{this.state.data.total || 0} Logs</Badge></Col></Row>);
+		return (<Row onClick={()=>{this.expand()}}><Col className="cursor-default"><FontAwesomeIcon icon="filter" /> Show/Hide Filters</Col><Col className="text-right"><Badge>{this.state.data.total.toLocaleString() || 0} Logs</Badge></Col></Row>);
 	}
 
 	renderFilters() {
